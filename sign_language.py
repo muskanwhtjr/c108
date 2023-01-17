@@ -24,10 +24,11 @@ while True:
                 lm_list.append(lm)
 
              #Code goes here   
+             finger_fold_status=[]
                 for tip in finger_tips:
                     x,y = int(lm_list[tip].x*w),int(lm_list[tip].y*h)
                     cv2.circle(img,(x,y),15,(255,0,0),cv2.FILLED)
-                    finger_fold_status=[]
+                   
 
                     if lm_list[tip].x<lm_list[tip-3].x:
                         cv2.circle(img,(x,y),15,(0,255,0),cv2.FILLED)
